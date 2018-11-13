@@ -8,9 +8,9 @@ server:
 spring:
     datasource:
         driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/mytest?useUnicode=true&characterEncoding=utf-8
-        username:
-        password:
+        url: jdbc:mysql://47.94.171.111:3306/mytest?useUnicode=true&characterEncoding=utf-8
+        username: root
+        password: root
     http:
         multipart:
           max-file-size: 10Mb
