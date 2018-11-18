@@ -6,18 +6,18 @@ import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 @Data
-@JsonIgnoreProperties({"id","session_key","password"})
+@JsonIgnoreProperties({"id","session_key"})
 public class User {
     @Id
     @GeneratedValue
     private Integer id;
-    private String name;
     private String openid;
     private String session_key;
     private String stuid;
-    private String password;
+    @Transient
     private String token;
 }

@@ -1,10 +1,7 @@
 package cn.edu.zjut.qiandao.controller;
 
 import cn.edu.zjut.qiandao.conf.Configuration;
-import cn.edu.zjut.qiandao.domain.Bangding;
-import cn.edu.zjut.qiandao.domain.Login;
-import cn.edu.zjut.qiandao.domain.User;
-import cn.edu.zjut.qiandao.domain.UserRespository;
+import cn.edu.zjut.qiandao.domain.*;
 import cn.edu.zjut.qiandao.service.FileService;
 import cn.edu.zjut.qiandao.service.UserService;
 import cn.edu.zjut.qiandao.utils.HttpClientUtils;
@@ -26,7 +23,7 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 
-@Controller
+@RestController
 public class UserController {
     @Autowired
     UserRespository userRespository;
@@ -35,13 +32,11 @@ public class UserController {
     @Autowired
     UserService userService;
     @GetMapping(value = "/user/{id}")
-    @ResponseBody
     public User id(@PathVariable("id") Integer id) {
         return userRespository.findById(id);
     }
 
     @RequestMapping(value = "/onLogin", method = RequestMethod.POST)
-    @ResponseBody
     public Result login(@RequestBody Login login) {
         // System.out.println("Loginsessionid="+request.getSession().getId());
         User user = userService.login(login);
@@ -54,14 +49,37 @@ public class UserController {
     }
 
     @RequestMapping(value = "/bangding", method = RequestMethod.POST)
-    @ResponseBody
-    public Result bangding(@RequestBody Bangding bangding, HttpServletRequest request) {
+    public Result bangding(@RequestBody Binding binding, HttpServletRequest request) {
         //  String openid=(String)request.getSession().getAttribute("openid");
-        String openid = bangding.getOpenid();
-        // System.out.println("Bangdingsessionid="+request.getSession().getId());
+        String openid = binding.getOpenid();
+        Result result=Results.error(100,"fail");
         if (openid == null)
             return Results.error(100, "用户认证异常");
-        return userService.bangding(bangding, openid);
+        try{
+             result=userService.bangding(binding,openid);
+        }catch (Exception e){
+            e.printStackTrace();
+            return Results.error(100,"exception",null);
+        }
+        return result;
+    }
+    @PostMapping(value = "/studentinfo")
+    public Result getstudentinfo(@RequestParam String openid){
+        Student student=null;
+        try{
+                student=userService.getStudentInfo(openid);
+        }catch(Exception e){
+            e.printStackTrace();
+            student=null;
+            return Results.error(100,"error");
+        }
+         return Results.success(student);
+    }
+    @PostMapping("/suggest")
+    public Result addSuggest(@RequestParam String openid,@RequestParam String suggest ){
+            if(userService.addSuggest(openid,suggest))
+                return Results.success(null);
+            else return Results.error(100,"fail");
     }
 
 }

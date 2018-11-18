@@ -6,5 +6,4 @@ public interface UserRespository extends JpaRepository<User,Integer> {
    // User getOne(Integer id);
     User findById(Integer id);
     User findByOpenid(String openid);
-  //  void countBy
 }

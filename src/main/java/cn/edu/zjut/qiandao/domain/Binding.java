@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Bangding {
+public class Binding {
     private String openid;
     private String stuid;
     private String password;
