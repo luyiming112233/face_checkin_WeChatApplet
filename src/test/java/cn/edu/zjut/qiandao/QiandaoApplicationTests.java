@@ -1,21 +1,16 @@
 package cn.edu.zjut.qiandao;
 
 import cn.edu.zjut.qiandao.conf.Configuration;
-import cn.edu.zjut.qiandao.domain.Login;
-import cn.edu.zjut.qiandao.domain.Student;
-import cn.edu.zjut.qiandao.domain.User;
-import cn.edu.zjut.qiandao.domain.UserRespository;
+import cn.edu.zjut.qiandao.dao.UserRespository;
 import cn.edu.zjut.qiandao.mapper.UserMapper;
 import cn.edu.zjut.qiandao.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

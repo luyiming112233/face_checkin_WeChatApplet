@@ -1,4 +1,4 @@
-package cn.edu.zjut.qiandao.domain;
+package cn.edu.zjut.qiandao.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

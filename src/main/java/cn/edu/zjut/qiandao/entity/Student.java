@@ -1,5 +1,6 @@
-package cn.edu.zjut.qiandao.domain;
+package cn.edu.zjut.qiandao.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -7,6 +8,7 @@ import javax.persistence.Id;
 
 @Entity
 @Data
+@JsonIgnoreProperties({"password"})
 public class Student
 {
     @Id

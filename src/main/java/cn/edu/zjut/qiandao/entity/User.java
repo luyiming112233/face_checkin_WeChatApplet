@@ -1,4 +1,4 @@
-package cn.edu.zjut.qiandao.domain;
+package cn.edu.zjut.qiandao.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

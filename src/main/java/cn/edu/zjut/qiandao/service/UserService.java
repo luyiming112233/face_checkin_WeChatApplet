@@ -1,7 +1,9 @@
 package cn.edu.zjut.qiandao.service;
 
 import cn.edu.zjut.qiandao.conf.Configuration;
-import cn.edu.zjut.qiandao.domain.*;
+import cn.edu.zjut.qiandao.dao.StudentRespository;
+import cn.edu.zjut.qiandao.dao.UserRespository;
+import cn.edu.zjut.qiandao.entity.*;
 import cn.edu.zjut.qiandao.mapper.UserMapper;
 import cn.edu.zjut.qiandao.utils.HttpClientUtils;
 import cn.edu.zjut.qiandao.utils.Result;
@@ -11,7 +13,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -52,6 +53,9 @@ public class UserService {
     public Result bangding(Binding binding, String openid)throws Exception{
           Student student=studentRespository.getOneByStuid(binding.getStuid());
           User user=userRespository.findByOpenid(openid);
+          log.info("传过来的信息:name"+binding.getName()+"  password:"+binding.getPassword());
+          log.info("数据库查出来的信息:name"+student.getName()+"  password:"+student.getPassword());
+          log.info("相等吗?name:"+binding.getName().equals(student.getName())+"  password:"+binding.getPassword().equals(student.getPassword()));
           if(student==null)
               return Results.error(100,"no such student");
           if(binding.getName().equals(student.getName())&&binding.getPassword().equals(student.getPassword())){

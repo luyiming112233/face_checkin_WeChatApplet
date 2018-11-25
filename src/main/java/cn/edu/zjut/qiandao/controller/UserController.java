@@ -1,27 +1,15 @@
 package cn.edu.zjut.qiandao.controller;
 
 import cn.edu.zjut.qiandao.conf.Configuration;
-import cn.edu.zjut.qiandao.domain.*;
-import cn.edu.zjut.qiandao.service.FileService;
+import cn.edu.zjut.qiandao.dao.UserRespository;
+import cn.edu.zjut.qiandao.entity.*;
 import cn.edu.zjut.qiandao.service.UserService;
-import cn.edu.zjut.qiandao.utils.HttpClientUtils;
 import cn.edu.zjut.qiandao.utils.Result;
 import cn.edu.zjut.qiandao.utils.Results;
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-import org.hibernate.annotations.GeneratorType;
-import org.omg.CORBA.Request;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
 
 @RestController
 public class UserController {

@@ -1,4 +1,4 @@
-package cn.edu.zjut.qiandao.domain;
+package cn.edu.zjut.qiandao.entity;
 
 public class Login {
     private String code;

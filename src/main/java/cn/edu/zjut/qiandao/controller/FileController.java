@@ -1,7 +1,6 @@
 package cn.edu.zjut.qiandao.controller;
 
-import cn.edu.zjut.qiandao.domain.User;
-import cn.edu.zjut.qiandao.domain.UserRespository;
+import cn.edu.zjut.qiandao.dao.UserRespository;
 import cn.edu.zjut.qiandao.service.FileService;
 import cn.edu.zjut.qiandao.utils.Result;
 import cn.edu.zjut.qiandao.utils.Results;
@@ -54,6 +53,15 @@ public class FileController {
     @PostMapping(value = "/register")
     @ResponseBody
     public Result registerface(@RequestParam("file") MultipartFile file, @RequestParam String stuid ){
-        return fileService.registface(file,stuid);
+       Result result=Results.error(100,"fail");
+        try{
+         result=fileService.registface(file,stuid);
+       }catch (FileNotFoundException e){
+           e.printStackTrace();
+           return Results.error(100,"file not found");
+       }catch (Exception e1){
+           return Results.error(100,"exception");
+       }
+        return result;
     }
 }

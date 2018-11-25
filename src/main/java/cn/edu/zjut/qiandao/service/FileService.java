@@ -24,7 +24,7 @@ public class FileService {
     //@Value(value = "")
     @Autowired
     UserMapper userMapper;
-    public boolean signByFace(MultipartFile file,String stuid)throws FileNotFoundException,IOException{
+    public boolean signByFace(MultipartFile file,String stuid)throws FileNotFoundException,IOException,Exception{
         if (!file.isEmpty()) {
             String uuid = UUID.randomUUID().toString().replaceAll("-", "");
             String filename = configuration.getUploadpath() + uuid + ".jpg";
@@ -40,7 +40,7 @@ public class FileService {
               String similary=HttpClientUtils.doGet(url);
             //  System.out.println(similary);
                 log.info("stuid="+stuid+" the similary is:"+similary);
-              if(Double.parseDouble(similary)>0.8)
+              if(Double.parseDouble(similary)>0.7)
                   return true;
               else return false;
                // return Integer.parseInt(similary);
@@ -53,36 +53,25 @@ public class FileService {
 
     }
     @Transactional
-    public Result registface(MultipartFile file,String stuid){
+    public Result registface(MultipartFile file,String stuid)throws FileNotFoundException,IOException,Exception{
         if (!file.isEmpty()) {
             String uuid = UUID.randomUUID().toString().replaceAll("-", "");
             String filename = configuration.getRegisterfacepath() + uuid + ".jpg";
             File saveFile = new File(filename);
             //    File saveFile = new File();
 
-            try {
                 BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(saveFile));
                 out.write(file.getBytes());
                 out.flush();
                 out.close();
                 userMapper.registerface(stuid,uuid);
                 log.info("registerfilename="+filename);
-                String url=configuration.getGetfeatureurl()+"url="+configuration.getRegisterfaceurl()+uuid+".jpg";
+                String url=configuration.getGetfeatureurl()+"?url="+configuration.getRegisterfaceurl()+"/"+uuid+".jpg";
                 String feature=HttpClientUtils.doGet(url);
                 log.info("register feature:"+feature);
                 userMapper.updatefeature(stuid,feature);
-                return Results.success(filename);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-                return Results.error(100,"上传失败");
-            } catch (IOException e) {
-                e.printStackTrace();
-                return Results.error(105,"上传失败");
-            }catch (Exception e){
-                log.error("发生了异常"+e.getMessage());
-                e.printStackTrace();
-                return Results.error(100,"未知异常");
-            }
+                userMapper.registerface(uuid,stuid);
+                return Results.success(null);
         } else {
             return Results.error(110,"上传失败，图片为空");
         }

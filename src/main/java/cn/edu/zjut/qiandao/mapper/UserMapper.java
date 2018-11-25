@@ -1,12 +1,10 @@
 package cn.edu.zjut.qiandao.mapper;
 
-import cn.edu.zjut.qiandao.domain.Student;
+import cn.edu.zjut.qiandao.entity.Student;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
-
-import javax.annotation.security.PermitAll;
 
 public interface UserMapper {
     //@Update()
