@@ -1,4 +1,4 @@
-package cn.edu.zjut.qiandao.entity;
+package cn.edu.zjut.qiandao.dto;
 
 public class Login {
     private String code;
@@ -8,6 +8,11 @@ public class Login {
     }
 
     public void setCode(String code) {
+
         this.code = code;
+    }
+    public Login(){}
+    public Login(String code){
+        this.code=code;
     }
 }

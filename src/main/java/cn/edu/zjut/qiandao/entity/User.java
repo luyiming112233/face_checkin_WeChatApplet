@@ -7,17 +7,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Transient;
+import javax.persistence.criteria.CriteriaBuilder;
 
 @Entity
 @Data
-@JsonIgnoreProperties({"id","session_key"})
 public class User {
     @Id
     @GeneratedValue
-    private Integer id;
+    private Integer autoid;
     private String openid;
     private String session_key;
-    private String stuid;
+    private Integer studentId;
     @Transient
     private String token;
 }

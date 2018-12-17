@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.edu.zjut.qiandao.mapper.SignMapper" >
+    <resultMap id="sign" type="cn.edu.zjut.qiandao.entity.Sign" >
+        <id column="sign_id" property="signId" jdbcType="INTEGER"/>
+        <result column="signinstance_id" property="signInstanceId" jdbcType="INTEGER"/>
+        <result column="sign_name" property="signName" jdbcType="VARCHAR"  />
+        <result column="sign_description" property="signDescription" jdbcType="VARCHAR"  />
+        <result column="placename" property="placeName" jdbcType="VARCHAR"  />
+        <result column="starttime" property="startTime" jdbcType="TIME"  />
+        <result column="endtime" property="endTime" jdbcType="TIME"  />
+        <result column="longitude" property="longitude" jdbcType="VARCHAR"  />
+        <result column="latitude" property="latitude" jdbcType="VARCHAR"  />
+        <result column="date" property="date" jdbcType="DATE"  />
+        <result column="teacher_id" property="teacherId" jdbcType="INTEGER"/>
+    </resultMap>
+
+
+    <select id="listDailySigns" resultMap="sign"  >
+        SELECT
+        signinstance_id,sign_id,sign_name,sign_description,placename,starttime,endtime,longitude,latitude,date,teacher_id
+        FROM sign LEFT JOIN signinstance ON sign_id
+        WHERE signinstance_id IN (
+        SELECT signinstance_id
+        FROM user LEFT JOIN student_sign ON user.student_id
+        WHERE openid=#{openid})
+        AND date=#{date}
+    </select>
+    <select id="listMonthSigns" resultMap="sign"  >
+        SELECT
+            signinstance_id,sign_id,sign_name,placename,starttime,endtime,longitude,latitude,date,teacher_id
+        FROM sign LEFT JOIN signinstance ON sign_id
+        WHERE signinstance_id IN (
+            SELECT signinstance_id
+            FROM user LEFT JOIN student_sign ON user.student_id
+            WHERE openid=#{openid})
+            AND date like #{date}
+    </select>
+</mapper>

@@ -88,13 +88,18 @@
 			<artifactId>java-jwt</artifactId>
 			<version>3.4.0</version>
 		</dependency>
-    </dependencies>
+	</dependencies>
 
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>true</fork> <!--增加jvm参数-->
+					<jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>
+				</configuration>
+
 			</plugin>
 		</plugins>
 	</build>

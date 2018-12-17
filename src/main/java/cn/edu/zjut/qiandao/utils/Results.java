@@ -1,11 +1,13 @@
 package cn.edu.zjut.qiandao.utils;
 
+import cn.edu.zjut.qiandao.dto.Result;
+
 public class Results {
 
     public static Result success(Object data) {
         Result result = new Result();
         result.setData(data);
-        result.setCode(200);
+        result.setCode(10000);
         result.setMessage("success");
         return result;
     }

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Enabling packaging data in stack traces -->
+<configuration packagingData="true">
+
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+    <!-- default values can be specified using the ":-" operator -->
+    <property name="LOG_PATH" value="log" />
+    <property name="INFO_LOG_FILE" value="${LOG_PATH}/info" />
+    <property name="WARN_LOG_FILE" value="${LOG_PATH}/warn" />
+    <property name="ERROR_LOG_FILE" value="${LOG_PATH}/error" />
+
+    <include
+            resource="org/springframework/boot/logging/logback/console-appender.xml" />
+
+    <appender name="INFO_FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${INFO_LOG_FILE}</file>
+        <rollingPolicy
+                class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- 每天滚动 -->
+            <fileNamePattern>${INFO_LOG_FILE}-%d{yyyy-MM-dd}.%i
+            </fileNamePattern>
+            <!-- 每个日志文件的最大为64MB，保存30天的历史记录，但总大小不超过1GB -->
+            <maxFileSize>64MB</maxFileSize>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                ${FILE_LOG_PATTERN}
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="WARN_FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 低于该配置级别的日志会被拒绝 -->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>WARN</level>
+        </filter>
+        <file>${WARN_LOG_FILE}</file>
+        <rollingPolicy
+                class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- 每天滚动 -->
+            <fileNamePattern>${WARN_LOG_FILE}-%d{yyyy-MM-dd}.%i
+            </fileNamePattern>
+            <!-- 每个日志文件的最大为64MB，保存30天的历史记录，但总大小不超过1GB -->
+            <maxFileSize>64MB</maxFileSize>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                ${FILE_LOG_PATTERN}
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ERROR_FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 低于该配置级别的日志会被拒绝 -->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <file>${ERROR_LOG_FILE}</file>
+        <rollingPolicy
+                class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- 每天滚动 -->
+            <fileNamePattern>${ERROR_LOG_FILE}-%d{yyyy-MM-dd}.%i
+            </fileNamePattern>
+            <!-- 每个日志文件的最大为64MB，保存30天的历史记录，但总大小不超过1GB -->
+            <maxFileSize>64MB</maxFileSize>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                ${FILE_LOG_PATTERN}
+            </pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <springProfile name="dev">
+            <appender-ref ref="CONSOLE" />
+        </springProfile>
+        <appender-ref ref="INFO_FILE" />
+        <appender-ref ref="WARN_FILE" />
+        <appender-ref ref="ERROR_FILE" />
+    </root>
+
+</configuration>

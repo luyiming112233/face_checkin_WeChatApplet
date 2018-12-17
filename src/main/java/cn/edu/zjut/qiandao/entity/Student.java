@@ -3,6 +3,7 @@ package cn.edu.zjut.qiandao.entity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -12,11 +13,18 @@ import javax.persistence.Id;
 public class Student
 {
     @Id
-    private String stuid;
+    private Integer studentId;
+    @Column(name = "student_name")
     private String name;
+    @Column(name = "student_password")
     private String password;
+    @Column(name="student_classname")
     private String classname;
+    @Column(name = "student_departname")
     private String departname;
+    @Column(name = "student_email")
     private String email;
+    @Column(name = "student_img")
+    private String img;
 
 }

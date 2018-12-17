@@ -20,19 +20,19 @@ package cn.edu.zjut.qiandao.utils;
       */
      public static final String SECRET = "QWpLslLlbmLng";
      /**
-      * token 过期时间: 10天
+      * token 过期时间: 1天
       */
      public static final int calendarField = Calendar.DATE;
-     public static final int calendarInterval = 10;
+     public static final int calendarInterval = 1;
 
      /**
       * JWT生成Token.<br/>
       * <p>
       * JWT构成: header, payload, signature
       *
-      * @param user_id 登录成功后用户user_id, 参数user_id不可传空
+      * @param openid 登录成功后用户小程序openid, 参数user_id不可传空 学号
       */
-     public static String createToken(Long user_id) throws Exception {
+     public static String createToken(String openid) throws Exception {
          Date iatDate = new Date(); // expire time
          Calendar nowTime = Calendar.getInstance();
          nowTime.add(calendarField, calendarInterval);
@@ -41,9 +41,7 @@ package cn.edu.zjut.qiandao.utils;
          map.put("alg", "HS256");
          map.put("typ", "JWT"); // build token // param backups {iss:Service, aud:APP}
          String token = JWT.create().withHeader(map)
-                 .withClaim("iss", "Service")
-                 .withClaim("aud", "APP")
-                 .withClaim("user_id", null == user_id ? null : user_id.toString())
+                 .withClaim("openid", openid)
                  .withIssuedAt(iatDate)
                  .withExpiresAt(expiresDate)
                  .sign(Algorithm.HMAC256(SECRET));
@@ -78,7 +76,7 @@ package cn.edu.zjut.qiandao.utils;
 
      public static String  getOpenid(String token) {
          Map<String, Claim> claims = verifyToken(token);
-         Claim user_id_claim = claims.get("user_id");
-         return user_id_claim.asString();
+         Claim openid_claim = claims.get("openid");
+         return openid_claim.asString();
      }
  }

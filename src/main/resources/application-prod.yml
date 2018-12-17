@@ -1,0 +1,29 @@
+server:
+    port: 8080
+    tomcat:
+      remote-ip-header: x-forwarded-for
+      protocol-header: x-forwarded-proto
+      port-header: X-Forwarded-Port
+    user-forward-headers: true
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://47.94.171.111:3306/mytest?useUnicode=true&characterEncoding=utf-8
+        username: root
+        password: root
+    http:
+        multipart:
+          max-file-size: 10Mb
+          max-request-size: 100Mb
+weixin:
+    appid: wx87e6cd26cffd5769
+    appsecret: 12c7640bd3b39dd2f34d0f7d0f5c0e0d
+    registerfacepath: C:\\xampp\\htdocs\\register\\
+    registerfaceurl: http://www.duliu12.xin/register
+    uploadpath: C:\\xampp\\htdocs\\face\\
+    uploadurl: http://www.duliu12.xin/face/
+    getsimilaryurl: http://120.78.92.163/face/getSimilarity
+    getfeatureurl: http://120.78.92.163/face/getFeature
+logging:
+  level: info
+  file: /log/sign.log

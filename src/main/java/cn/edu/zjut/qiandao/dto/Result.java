@@ -1,4 +1,4 @@
-package cn.edu.zjut.qiandao.utils;
+package cn.edu.zjut.qiandao.dto;
 
 public class Result {
     private int code;

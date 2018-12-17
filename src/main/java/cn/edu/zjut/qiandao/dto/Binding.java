@@ -1,4 +1,4 @@
-package cn.edu.zjut.qiandao.entity;
+package cn.edu.zjut.qiandao.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Binding {
     private String openid;
-    private String stuid;
+    private Integer studentId;
     private String password;
     private String name;
 }
