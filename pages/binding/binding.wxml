@@ -1,0 +1,23 @@
+<!--pages/login/login.wxml-->
+<!--pages/bindPhone/bindPhone.wxml-->
+<form bindsubmit="formSubmit">
+
+<div class="weui-cell weui-cell_vcode">
+        <div class="weui-cell__bd">
+            <input class="weui-input" name='stuid' type="text" placeholder="请输入学号"/>
+        </div>
+      </div>
+      <div class="weui-cell weui-cell_vcode">
+        <div class="weui-cell__bd">
+            <input class="weui-input" name='name'type="text" placeholder="请输入姓名"/>
+        </div>
+      </div>
+    <div class="weui-cell weui-cell_vcode">
+        <div class="weui-cell__bd">
+            <input class="weui-input" name='password' type="password" placeholder="请输入密码"/>
+        </div>
+      </div>
+<view class="page__bd page__bd_spacing" type="">
+  <button class="weui-btn" type="primary" form-type="submit" size="default">绑定</button>
+</view>
+</form>

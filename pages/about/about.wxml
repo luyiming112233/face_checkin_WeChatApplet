@@ -1,0 +1,11 @@
+<!--pages/about/about.wxml-->
+<div class='weui-cell'>
+                <h4 class="weui-media-box__title">系统概要</h4>
+                <p class="weui-media-box__desc">本系统支持各个活动的签到功能</p>
+            </div>
+
+   <div class="weui-cell">
+                <h4 class="weui-media-box__title">版权属于</h4>
+                <p class="weui-media-box__desc">本版权归属于软件工程小组</p>
+            </div>
+

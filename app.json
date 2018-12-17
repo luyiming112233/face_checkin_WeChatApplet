@@ -1,0 +1,45 @@
+{
+  "pages":[
+      "pages/daily/daily",
+      "pages/mine/mine",
+      "pages/my/my",
+      "pages/logs/logs",
+      "pages/cal/cal",
+      "pages/sign/sign",
+      "pages/personal/personal",
+      "pages/about/about",
+      "pages/index/index",
+      "pages/binding/binding",
+      "pages/suggest/suggest",
+      "pages/register/register"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#66ccff",
+    "navigationBarTitleText": "zjut早打卡",
+    "navigationBarTextStyle":"black"
+  },
+ "tabBar": {
+  "selectedColor": "#1296db",
+  "list": [
+    {
+      "pagePath": "pages/daily/daily",
+      "text": "我的签到",
+      "iconPath": "images/images/1.png",
+      "selectedIconPath": "images/images/1.png"
+    },
+    {
+      "pagePath": "pages/cal/cal",
+      "text": "签到日程",
+      "iconPath": "images/images/2.png",
+      "selectedIconPath": "images/images/2.png"
+    },
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "个人中心",
+      "iconPath": "images/images/3.png",
+      "selectedIconPath": "images/images/3.png"
+    }
+  ]
+}
+}

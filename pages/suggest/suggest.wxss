@@ -1,0 +1,19 @@
+/* pages/suggest/suggest.wxss */
+textarea {
+  width: 700rpx;
+  padding: 25rpx 0;
+}
+
+.textarea-wrp {
+  padding: 0 25rpx;
+  background-color: #00d9ff13;
+}
+
+
+.page-section-title{
+  font-size: 40rpx;
+  color: #999999;
+  margin-bottom: 10rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}

@@ -1,0 +1,55 @@
+
+ .my_1{width:749rpx;overflow:hidden;padding:0rpx;overflow-y:auto;overflow-x:hidden;clear:both;float:left;background-color:#f0f2f5;text-align:left;}
+ .my_1 .my_2{width:749rpx;overflow:hidden;padding:0rpx;overflow-y:auto;overflow-x:hidden;clear:both;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left;}
+ .my_1 .my_2 .my_3{width:749rpx;height:136rpx;padding:0rpx;clear:both;margin-top:0rpx;margin-left:0rpx;float:left;background-color:#ffffff;text-align:left;}
+ .my_1 .my_2 .my_3 .my_6{width:308rpx;height:122rpx;padding:0rpx;margin-top:0rpx;margin-left:43rpx;float:left;text-align:left;}
+ .my_1 .my_2 .my_3 .my_6 .my_7{width:124rpx;height:122rpx;padding:0rpx;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; line-height:122rpx;}
+ .my_1 .my_2 .my_3 .my_6 .my_8{width:162rpx;height:41rpx;padding:0rpx;margin-top:43rpx;margin-left:21rpx;float:left;text-align:left; color:#000000;font-size:33rpx; line-height:41rpx;}
+ .my_1 .my_2 .my_4{width:749rpx;overflow:hidden;padding:0rpx;clear:both;margin-top:19rpx;margin-left:0rpx;float:left;background-color:#ffffff;text-align:left;}
+ .my_1 .my_2 .my_4 .my_9{width:733rpx;height:630rpx;padding:0rpx;margin-top:41rpx;margin-left:16rpx;float:left;text-align:left;}
+ .my_1 .my_2 .my_4 .my_9 .my_10{width:709rpx;height:36rpx;padding:0rpx;clear:both;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_10 .my_11{width:209rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_10 .my_11 .my_12{width:36rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_10 .my_11 .my_13{width:159rpx;height:31rpx;padding:0rpx;margin-top:4rpx;margin-left:13rpx;float:left;text-align:left; color:#000000;font-size:26rpx; line-height:31rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_10 .my_14{width:19rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:481rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_16{width:731rpx;height:1rpx;font-size:1rpx;padding:0rpx;clear:both;margin-top:38rpx;margin-left:1rpx;float:left;background-color:#d9d9d9;text-align:left; line-height:10rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_17{width:709rpx;height:36rpx;padding:0rpx;clear:both;margin-top:42rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_17 .my_18{width:209rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_17 .my_18 .my_19{width:36rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_17 .my_18 .my_20{width:159rpx;height:31rpx;padding:0rpx;margin-top:4rpx;margin-left:13rpx;float:left;text-align:left; color:#000000;font-size:26rpx; line-height:31rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_17 .my_21{width:19rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:481rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_22{width:731rpx;height:1rpx;font-size:1rpx;padding:0rpx;clear:both;margin-top:38rpx;margin-left:1rpx;float:left;background-color:#d9d9d9;text-align:left; line-height:10rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_23{width:709rpx;height:36rpx;padding:0rpx;clear:both;margin-top:43rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_23 .my_24{width:209rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_23 .my_24 .my_25{width:40rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_23 .my_24 .my_26{width:159rpx;height:31rpx;padding:0rpx;margin-top:4rpx;margin-left:9rpx;float:left;text-align:left; color:#000000;font-size:26rpx; line-height:31rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_23 .my_27{width:19rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:481rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_28{width:731rpx;height:1rpx;font-size:1rpx;padding:0rpx;clear:both;margin-top:38rpx;margin-left:1rpx;float:left;background-color:#d9d9d9;text-align:left; line-height:10rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_29{width:709rpx;height:36rpx;padding:0rpx;clear:both;margin-top:42rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_29 .my_30{width:209rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_29 .my_30 .my_31{width:43rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_29 .my_30 .my_32{width:159rpx;height:31rpx;padding:0rpx;margin-top:4rpx;margin-left:6rpx;float:left;text-align:left; color:#000000;font-size:26rpx; line-height:31rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_29 .my_33{width:19rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:481rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_34{width:731rpx;height:1rpx;font-size:1rpx;padding:0rpx;clear:both;margin-top:38rpx;margin-left:1rpx;float:left;background-color:#d9d9d9;text-align:left; line-height:10rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_35{width:709rpx;height:36rpx;padding:0rpx;clear:both;margin-top:41rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_35 .my_36{width:209rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_35 .my_36 .my_37{width:40rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_35 .my_36 .my_38{width:159rpx;height:31rpx;padding:0rpx;margin-top:4rpx;margin-left:9rpx;float:left;text-align:left; color:#000000;font-size:26rpx; line-height:31rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_35 .my_39{width:19rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:481rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_40{width:731rpx;height:1rpx;font-size:1rpx;padding:0rpx;clear:both;margin-top:38rpx;margin-left:1rpx;float:left;background-color:#d9d9d9;text-align:left; line-height:10rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_41{width:709rpx;height:36rpx;padding:0rpx;clear:both;margin-top:42rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_41 .my_42{width:209rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_41 .my_42 .my_43{width:43rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_41 .my_42 .my_44{width:159rpx;height:31rpx;padding:0rpx;margin-top:4rpx;margin-left:6rpx;float:left;text-align:left; color:#000000;font-size:26rpx; line-height:31rpx;}
+ .my_1 .my_2 .my_4 .my_9 .my_41 .my_45{width:19rpx;height:36rpx;padding:0rpx;margin-top:0rpx;margin-left:481rpx;float:left;text-align:left; line-height:36rpx;}
+ .my_1 .my_5{width:749rpx;height:101rpx;padding:0rpx;clear:both;float:left;position: fixed;left:0rpx;bottom:0rpx;background-color:#ffffff;text-align:left;}
+ .my_1 .my_5 .my_46{width:542rpx;height:71rpx;padding:0rpx;margin-top:15rpx;margin-left:102rpx;float:left;text-align:left;}
+ .my_1 .my_5 .my_46 .my_47{width:45rpx;height:71rpx;padding:0rpx;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left;}
+ .my_1 .my_5 .my_46 .my_47 .my_48{width:45rpx;height:43rpx;padding:0rpx;clear:both;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; line-height:43rpx;}
+ .my_1 .my_5 .my_46 .my_47 .my_49{width:45rpx;height:20rpx;padding:0rpx;clear:both;margin-top:7rpx;margin-left:0rpx;float:left;text-align:center; color:#000000;font-size:17rpx; line-height:20rpx;}
+ .my_1 .my_5 .my_46 .my_50{width:45rpx;height:71rpx;padding:0rpx;margin-top:0rpx;margin-left:204rpx;float:left;text-align:left;}
+ .my_1 .my_5 .my_46 .my_50 .my_51{width:45rpx;height:43rpx;padding:0rpx;clear:both;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; line-height:43rpx;}
+ .my_1 .my_5 .my_46 .my_50 .my_52{width:45rpx;height:20rpx;padding:0rpx;clear:both;margin-top:7rpx;margin-left:0rpx;float:left;text-align:center; color:#000000;font-size:17rpx; line-height:20rpx;}
+ .my_1 .my_5 .my_46 .my_53{width:45rpx;height:71rpx;padding:0rpx;margin-top:0rpx;margin-left:200rpx;float:left;text-align:left;}
+ .my_1 .my_5 .my_46 .my_53 .my_54{width:45rpx;height:43rpx;padding:0rpx;clear:both;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; line-height:43rpx;}
+ .my_1 .my_5 .my_46 .my_53 .my_55{width:45rpx;height:20rpx;padding:0rpx;clear:both;margin-top:7rpx;margin-left:0rpx;float:left;text-align:center; color:#e74d3d;font-size:17rpx; line-height:20rpx;}

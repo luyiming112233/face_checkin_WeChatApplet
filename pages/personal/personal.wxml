@@ -1,0 +1,46 @@
+<!--pages/personal/personal.wxml-->
+<view class='content'>
+<div class="weui-cell">
+<text class='left'>头像：</text>
+ <view class="avatar">
+       <open-data style='width:50px;height:50px;display:inline-block;overflow:hidden;' type='userAvatarUrl'></open-data>
+      </view>
+</div>
+<div class='weui-cell'>
+  <view class='nickname'>
+  <text class='left'>昵称：</text>
+  <div class="weui-textarea-counter"><open-data type="userNickName"></open-data> </div>
+  </view>
+  </div>
+
+  <div class='weui-cell'>
+    <view class='item'  bindtap='zairu'>
+      <text class='left'>学号：</text>
+      <div class="weui-textarea-counter"><text class='right'>{{myinfo.no}}</text></div>
+    </view>
+    </div>
+    <div class='weui-cell'>
+    <view class='item'>
+      <text class='left'>姓名：</text>
+      <div class="weui-textarea-counter"><text class='right'>{{myinfo.name}}</text></div>
+    </view>
+    </div>
+    <div class='weui-cell'>
+    <view class='item'>
+     <text class='left'> 班级：</text>
+     <div class="weui-textarea-counter"><text class='right'>{{myinfo.classname}}</text></div>
+    </view>
+    </div>
+    <div class='weui-cell'>
+    <view class='item'>
+      <text class='left'>院系：</text>
+      <div class="weui-textarea-counter"><text class='right'>{{myinfo.departmentname}}</text></div>
+    </view>
+    </div>
+    <div class='weui-cell'>
+    <view class='item' bindtap='setemail'>
+     <text class='left'> 邮箱：</text>
+     <div class="weui-textarea-counter"><text class='right' wx:if="{{myinfo.email==''|| myinfo.email==null}}">未绑定</text><text class='right' wx:else>{{myinfo.email}}</text></div>
+    </view>
+    </div>
+</view>

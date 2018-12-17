@@ -1,0 +1,30 @@
+<!--pages/daily/daily.wxml-->
+<view >
+   <!--  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}" >
+     <block  wx:for="{{[0,1,2,3]}}" wx:for-item="i" >
+     <view class="tab-item {{currentTab==i?'active':''}}" data-current="{{i}}" bindtap="swichNav">打卡{{i}}</view> 
+    
+      </block>
+    </scroll-view> -->
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
+     style="height:{{winHeight}}rpx">
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scoll-h" >
+                <block wx:for="{{dailyDetail}}" wx:key="*this" wx:for-item="j" >
+                    <view class="item-ans"  bindtap='sign' data-signInstanceId='{{j.signInstanceId}}' >
+                        <view class="avatar">
+                           {{j.signName}}
+                           
+                        </view>
+                        <view class="expertInfo">
+                            <view class="name">{{j.placeName}}</view>
+                            <view class="tag">{{j.startTime}}-{{j.endTime}}</view>
+                            <view class="answerHistory">{{j.date}} </view>
+                        </view>
+          
+                    </view>
+                </block>
+            </scroll-view>
+      </swiper-item>
+    </swiper>
+</view>

@@ -1,0 +1,5 @@
+/* pages/register/register.wxss */
+
+.my_img {
+  width: 300rpx;
+}

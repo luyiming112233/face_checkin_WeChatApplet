@@ -1,0 +1,53 @@
+<scroll-view scroll-y class="my_1" >
+          <scroll-view scroll-y class="my_2" >
+               <view class="my_3" >
+                    <view class="my_6" >
+                      
+                          <open-data type="userAvatarUrl"  style=" width:124rpx;height:122rpx;"  border="0"   bindtap="my_7_click"  class="my_7" ></open-data> 
+                        <open-data type="userNickName" lang="zh_CN" class="my_8"></open-data> 
+                    </view>
+               </view>
+               <view class="my_4" >
+                    <view class="my_9" >
+                         <view class="my_10" >
+                              <view class="my_11" >
+                                   <image src="images/my/my_12_12.png" style=" width:36rpx;height:36rpx;"  border="0"   bindtap="my_12_click"  class="my_12"  ></image>
+                                   <text class="my_13" bindtap="my_13_click" >个人信息</text>
+                              </view>
+                              <image src="images/my/my_14_14.png" style=" width:19rpx;height:36rpx;"  border="0"   bindtap="my_14_click"  class="my_14" ></image>
+                         </view>
+                         <view class="my_16" >
+                         </view>
+                         <view class="my_17" >
+                              <view class="my_18" >
+                                   <image src="images/my/my_19_19.png" style=" width:36rpx;height:36rpx;"  border="0"   bindtap="my_19_click"  class="my_19" ></image>
+                                   <text class="my_20"  bindtap="my_20_click"  >学号绑定</text>
+                              </view>
+                              
+                              <image src="images/my/my_21_21.png" style=" width:19rpx;height:36rpx;"  border="0"   bindtap="my_21_click"  class="my_21" ></image>
+                         </view>
+                         <view class="my_22" >
+                         </view>
+                         <view class="my_23" >
+                              <view class="my_24" >
+                                   <image src="images/my/my_25_25.png" style=" width:40rpx;height:36rpx;"  border="0"   bindtap="my_25_click"  class="my_25" ></image>
+                                   <text class="my_26"  bindtap="my_26_click"  >关  于</text>
+                              </view>
+                              <image src="images/my/my_27_27.png" style=" width:19rpx;height:36rpx;"  border="0"   bindtap="my_27_click"  class="my_27" ></image>
+                         </view>
+                         <view class="my_28" >
+                         </view>
+                         <view class="my_29" >
+                              <view class="my_30" >
+                                   <image src="images/my/my_31_31.png" style=" width:43rpx;height:36rpx;"  border="0"   bindtap="my_31_click"  class="my_31" ></image>
+                                   <text class="my_32"  bindtap="my_32_click"  >反  馈</text>
+                              </view>
+                              <image src="images/my/my_33_33.png" style=" width:19rpx;height:36rpx;"  border="0"   bindtap="my_33_click"  class="my_33" ></image>
+                         </view>
+                         <view class="my_28" >
+                         </view>
+                    </view>
+               </view>
+          </scroll-view>
+          
+     </scroll-view>

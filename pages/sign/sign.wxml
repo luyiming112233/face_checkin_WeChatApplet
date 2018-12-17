@@ -1,0 +1,3 @@
+<view class="container2">
+  <map id="map" latitude="{{latitude}}" longitude="{{longitude}}"    circles="{{circles}}"   show-location style="width: 100%; height: 100%;" markers="{{markers}}" controls="{{controls}}" scale="19" bindcontroltap="bindcontroltap"/>
+</view>
