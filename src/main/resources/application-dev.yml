@@ -8,8 +8,8 @@ spring:
     datasource:
         driver-class-name: com.mysql.jdbc.Driver
         url: jdbc:mysql://47.94.171.111:3306/mytest?useUnicode=true&characterEncoding=utf-8
-        username: root
-        password: root
+        username:
+        password:
     http:
         multipart:
           max-file-size: 10Mb
@@ -18,8 +18,8 @@ mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml
   config-location: classpath:mybatis/mybatis-config.xml
 weixin:
-    appid: wx87e6cd26cffd5769
-    appsecret: 12c7640bd3b39dd2f34d0f7d0f5c0e0d
+    appid:
+    appsecret:
     registerfacepath: //usr//local//nginx//html//register//
     registerfaceurl: http://api.duliu12.xin/register/
     uploadpath: //usr//local//nginx//html//upload//
