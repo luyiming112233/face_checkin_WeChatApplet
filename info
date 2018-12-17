@@ -1,0 +1,98 @@
+2018-12-08 13:51:26.720  INFO 10932 --- [main] cn.edu.zjut.qiandao.QiandaoApplication   : Starting QiandaoApplication v0.0.1-SNAPSHOT on VM_0_13_centos with PID 10932 (/home/qiandao/qiandao-0.0.1-SNAPSHOT.jar started by root in /home/qiandao)
+2018-12-08 13:51:26.723  INFO 10932 --- [main] cn.edu.zjut.qiandao.QiandaoApplication   : The following profiles are active: dev
+2018-12-08 13:51:27.474  INFO 10932 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c8da962: startup date [Sat Dec 08 13:51:27 CST 2018]; root of context hierarchy
+2018-12-08 13:51:30.126  INFO 10932 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e1750a30] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-08 13:51:31.011  INFO 10932 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-12-08 13:51:31.091  INFO 10932 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-08 13:51:31.092  INFO 10932 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-12-08 13:51:31.292  INFO 10932 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-08 13:51:31.292  INFO 10932 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3818 ms
+2018-12-08 13:51:31.567  INFO 10932 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-08 13:51:31.570  INFO 10932 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-08 13:51:31.571  INFO 10932 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-08 13:51:31.571  INFO 10932 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-08 13:51:31.571  INFO 10932 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-08 13:51:36.411  INFO 10932 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-12-08 13:51:36.438  INFO 10932 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-08 13:51:36.655  INFO 10932 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-12-08 13:51:36.657  INFO 10932 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-12-08 13:51:36.658  INFO 10932 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-12-08 13:51:36.763  INFO 10932 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-12-08 13:51:37.127  INFO 10932 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-12-08 13:51:37.916  INFO 10932 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-08 13:51:39.461  INFO 10932 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c8da962: startup date [Sat Dec 08 13:51:27 CST 2018]; root of context hierarchy
+2018-12-08 13:51:39.644  INFO 10932 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/upload],methods=[POST]}" onto public cn.edu.zjut.qiandao.dto.Result cn.edu.zjut.qiandao.web.controller.FileController.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.FileNotFoundException,java.io.IOException,java.lang.Exception
+2018-12-08 13:51:39.645  INFO 10932 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/testupload],methods=[GET]}" onto public java.lang.String cn.edu.zjut.qiandao.web.controller.FileController.testupload()
+2018-12-08 13:51:39.645  INFO 10932 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/register],methods=[POST]}" onto public cn.edu.zjut.qiandao.dto.Result cn.edu.zjut.qiandao.web.controller.FileController.registerface(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.FileNotFoundException,java.lang.Exception
+2018-12-08 13:51:39.647  INFO 10932 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/suggest],methods=[POST]}" onto public cn.edu.zjut.qiandao.dto.Result cn.edu.zjut.qiandao.web.controller.UserController.addSuggest(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-12-08 13:51:39.647  INFO 10932 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/bangding],methods=[POST]}" onto public cn.edu.zjut.qiandao.dto.Result cn.edu.zjut.qiandao.web.controller.UserController.bangding(cn.edu.zjut.qiandao.dto.Binding,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2018-12-08 13:51:39.647  INFO 10932 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/studentinfo],methods=[POST]}" onto public cn.edu.zjut.qiandao.dto.Result cn.edu.zjut.qiandao.web.controller.UserController.getstudentinfo(javax.servlet.http.HttpServletRequest)
+2018-12-08 13:51:39.648  INFO 10932 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/onLogin],methods=[POST]}" onto public cn.edu.zjut.qiandao.dto.Result cn.edu.zjut.qiandao.web.controller.UserController.login(cn.edu.zjut.qiandao.dto.Login) throws java.lang.Exception
+2018-12-08 13:51:39.648  INFO 10932 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/{id}],methods=[GET]}" onto public cn.edu.zjut.qiandao.entity.User cn.edu.zjut.qiandao.web.controller.UserController.id(java.lang.Integer)
+2018-12-08 13:51:39.649  INFO 10932 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-08 13:51:39.650  INFO 10932 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-08 13:51:39.712  INFO 10932 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-08 13:51:39.713  INFO 10932 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-08 13:51:39.756  INFO 10932 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalExceptionHandler
+2018-12-08 13:51:39.802  INFO 10932 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-08 13:51:40.910  INFO 10932 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-08 13:51:41.124  INFO 10932 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-12-08 13:51:41.150  INFO 10932 --- [main] cn.edu.zjut.qiandao.QiandaoApplication   : Started QiandaoApplication in 16.342 seconds (JVM running for 18.759)
+2018-12-08 13:54:07.112  INFO 10932 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-08 13:54:07.112  INFO 10932 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-08 13:54:07.137  INFO 10932 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2018-12-08 13:54:08.671  INFO 10932 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-12-08 14:03:22.543  WARN 10932 --- [http-nio-8080-exec-9] c.e.z.q.web.GlobalExceptionHandler       : TOKEN=null,ip=115.236.9.69
+
+cn.edu.zjut.qiandao.exception.SignException: 认证异常
+	at cn.edu.zjut.qiandao.web.LoginInterceptor.preHandle(LoginInterceptor.java:19) ~[classes!/:0.0.1-SNAPSHOT]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133) ~[spring-webmvc-4.3.20.RELEASE.jar!/:4.3.20.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962) ~[spring-webmvc-4.3.20.RELEASE.jar!/:4.3.20.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.20.RELEASE.jar!/:4.3.20.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) [spring-webmvc-4.3.20.RELEASE.jar!/:4.3.20.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) [spring-webmvc-4.3.20.RELEASE.jar!/:4.3.20.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) [spring-webmvc-4.3.20.RELEASE.jar!/:4.3.20.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.3.20.RELEASE.jar!/:4.3.20.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.20.RELEASE.jar!/:4.3.20.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) [spring-web-4.3.20.RELEASE.jar!/:4.3.20.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.20.RELEASE.jar!/:4.3.20.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) [spring-web-4.3.20.RELEASE.jar!/:4.3.20.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.20.RELEASE.jar!/:4.3.20.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) [spring-web-4.3.20.RELEASE.jar!/:4.3.20.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.20.RELEASE.jar!/:4.3.20.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:685) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_191]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
+
+2018-12-08 14:03:22.552  WARN 10932 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [cn.edu.zjut.qiandao.exception.SignException: 认证异常]
