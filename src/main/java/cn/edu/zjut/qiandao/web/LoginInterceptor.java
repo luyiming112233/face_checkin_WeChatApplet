@@ -15,7 +15,7 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
        String token=httpServletRequest.getHeader(UserHttpHeader.USER_TOKEN);
        String ip=httpServletRequest.getHeader("X-Forwarded-For");
-          if(null==token)
+          if(null==token||""==token)
               throw new SignException(ErrorCode.TOKEN_NOT_EXIST,"TOKEN={},ip={}",token,ip);
           String openid= JWTUtils.getOpenid(token);
           if(null==openid)

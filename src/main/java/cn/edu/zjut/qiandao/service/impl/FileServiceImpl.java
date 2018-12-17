@@ -21,6 +21,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.UUID;
 @Service
 @Slf4j
@@ -70,6 +72,8 @@ public class FileServiceImpl implements FileService {
             studentSign.setImgurl(imgurl);
             studentSign.setStatus(SignResult.SIGN_SUCCESS);
             studentSign.setSimilary(mysimilarity);
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            studentSign.setSignTime(format.format(new Date()));
                 studentSignRepository.save(studentSign);
         } else {
             log.error("file empty");

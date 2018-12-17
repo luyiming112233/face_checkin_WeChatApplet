@@ -160,7 +160,7 @@ public class HttpClientUtils {
             CloseableHttpResponse response = null;
             try {
                 HttpGet httpGet = new HttpGet(url);
-                RequestConfig requestConfig=RequestConfig.custom().setSocketTimeout(10).setConnectTimeout(10).build();
+                RequestConfig requestConfig=RequestConfig.custom().setSocketTimeout(60000).setConnectTimeout(60000).build();
                 httpGet.setConfig(requestConfig);
                 client = HttpClients.createDefault();
                 response = client.execute(httpGet);

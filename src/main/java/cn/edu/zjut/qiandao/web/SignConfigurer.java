@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 public class SignConfigurer extends WebMvcConfigurerAdapter {
     @Override
     public void addInterceptors(InterceptorRegistry registry){
-        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/**").excludePathPatterns("/onLogin");
+        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/**").addPathPatterns("/student/**").addPathPatterns("/file/**").excludePathPatterns("/onLogin");
         super.addInterceptors(registry);
     }
 }

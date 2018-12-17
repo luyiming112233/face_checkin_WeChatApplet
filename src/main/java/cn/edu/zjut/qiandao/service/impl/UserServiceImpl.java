@@ -7,7 +7,6 @@ import cn.edu.zjut.qiandao.dao.SuggestRepository;
 import cn.edu.zjut.qiandao.dao.UserRepository;
 import cn.edu.zjut.qiandao.dto.Binding;
 import cn.edu.zjut.qiandao.dto.Login;
-import cn.edu.zjut.qiandao.dto.StudentDTO;
 import cn.edu.zjut.qiandao.dto.UserDTO;
 import cn.edu.zjut.qiandao.entity.*;
 import cn.edu.zjut.qiandao.exception.SignException;
@@ -80,7 +79,7 @@ public class UserServiceImpl implements UserService {
           }else
               throw new SignException(ErrorCode.NAME_OR_PASSWORD_ERROR,"name={},password={}",binding.getName(),binding.getPassword());
     }
-    public StudentDTO getStudentInfo(String openid){
+    /*public StudentDTO getStudentInfo(String openid){
         StudentDTO studentDTO=new StudentDTO();
         if(null==openid)
             throw new SignException(ErrorCode.OPENID_NOT_NULL,"openid={}",openid);
@@ -89,7 +88,7 @@ public class UserServiceImpl implements UserService {
             throw new SignException(ErrorCode.STUID_NOT_EXIST,"studentid={}",student.getStudentId());
         BeanUtils.copyProperties(student,studentDTO);
         return studentDTO;
-    }
+    }*/
     public void addSuggest(String openid,String suggest){
         if(null==openid)
             throw new SignException(ErrorCode.OPENID_NOT_NULL,"openid={}",openid);

@@ -5,6 +5,7 @@ import cn.edu.zjut.qiandao.constant.UserHttpHeader;
 import cn.edu.zjut.qiandao.dao.UserRepository;
 import cn.edu.zjut.qiandao.dto.*;
 import cn.edu.zjut.qiandao.entity.*;
+import cn.edu.zjut.qiandao.service.StudentService;
 import cn.edu.zjut.qiandao.service.UserService;
 import cn.edu.zjut.qiandao.utils.JWTUtils;
 import cn.edu.zjut.qiandao.utils.Results;
@@ -21,6 +22,8 @@ public class UserController {
     Configuration conf;
     @Autowired
     UserService userService;
+    @Autowired
+    StudentService studentService;
     @GetMapping(value = "/user/{id}")
     public User id(@PathVariable("id") Integer id) {
         return userRepository.findByAutoid(id);
@@ -45,7 +48,7 @@ public class UserController {
     public Result getstudentinfo(HttpServletRequest request){
         String token=request.getHeader(UserHttpHeader.USER_TOKEN);
         String openid=JWTUtils.getOpenid(token);
-        StudentDTO studentDTO= userService.getStudentInfo(openid);
+        StudentDTO studentDTO= studentService.getStudentInfo(openid);
          return Results.success(studentDTO);
     }
     @PostMapping("/suggest")

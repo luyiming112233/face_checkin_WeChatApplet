@@ -4,6 +4,8 @@ package cn.edu.zjut.qiandao.utils;
  import java.util.HashMap;
  import java.util.Map;
  //import com.alibaba.druid.util.StringUtils;
+ import cn.edu.zjut.qiandao.constant.ErrorCode;
+ import cn.edu.zjut.qiandao.exception.SignException;
  import com.auth0.jwt.JWT;
  import com.auth0.jwt.JWTVerifier;
  import com.auth0.jwt.algorithms.Algorithm;
@@ -63,6 +65,7 @@ package cn.edu.zjut.qiandao.utils;
              } catch (Exception e) {
                  // e.printStackTrace(); // token 校验失败, 抛出Token验证非法异常
                  // } return jwt.getClaims();
+                 throw new SignException(ErrorCode.TOKEN_INVALID,"token={}",token);
 
              }
              return jwt.getClaims();
